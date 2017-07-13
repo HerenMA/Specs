@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
     s.library      = "stdc++"
 
     s.source_files = "HRVoiceConvert/**/*.{h,m,mm}"
-    s.vendored_libraries = 'HRVoiceConvert/**/*.a'
-    s.public_header_files = 'HRVoiceConvert/Classes/HRVoiceConvert.h'
+    s.vendored_libraries = "HRVoiceConvert/**/*.a"
+    s.public_header_files = "HRVoiceConvert/Classes/HRVoiceConvert.h"
 end
