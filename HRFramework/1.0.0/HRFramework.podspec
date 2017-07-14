@@ -12,9 +12,8 @@ Pod::Spec.new do |s|
     s.frameworks = "Foundation", "UIKit"
     s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
 
-s.dependency 'AFNetworking', '~> 3.1.0'
-s.dependency 'YYCache', '~> 1.0.4'
-#s.dependency 'YYCategories', '~> 1.0.4'
-#s.dependency 'YYModel', '~> 1.0.4'
-#s.dependency 'YYWebImage', '~> 1.0.5'
+    s.dependency 'AFNetworking', '~> 3.1.0'
+    s.dependency 'YYCategories', '~> 1.0.4'
+    s.dependency 'YYModel', '~> 1.0.4'
+    s.dependency 'YYWebImage', '~> 1.0.5'
 end
