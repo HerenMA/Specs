@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.frameworks = "Foundation", "UIKit"
     s.library      = "stdc++"
 
-    s.source_files = "HRVoiceConvert/**/*.{h,m,mm}"
+    s.source_files = "HRVoiceConvert/**/*.{h,m}"
     s.vendored_libraries = "HRVoiceConvert/**/*.a"
     s.public_header_files = "HRVoiceConvert/Classes/HRVoiceConvert.h"
 end
