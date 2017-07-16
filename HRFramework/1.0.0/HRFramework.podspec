@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
-    s.frameworks = "Foundation", "UIKit"
+    s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation", "CoreLocation"
     s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
 
     s.dependency 'AFNetworking', '~> 3.1.0'
