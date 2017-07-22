@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
-    s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation", "CoreLocation"
+    s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation"
     s.vendored_frameworks = "HRIMFramework/Classes/HRIMFramework.framework"
+    s.resources    = 'HRIMFramework/Assets/HRIMSDK.bundle'
 
     s.dependency 'HRFramework', '~> 1.0.0'
-    s.dependency 'HRZXingObjC', '~> 3.2.1'
     s.dependency 'HRMJPhotoBrowser', '~> 1.0.2'
     s.dependency 'HRTIMSDK', '~> 2.5.6'
 
@@ -24,4 +24,6 @@ Pod::Spec.new do |s|
     s.dependency 'MGSwipeTableCell', '~> 1.5.6'
     s.dependency 'MJRefresh', '~> 3.1.12'
     s.dependency 'SVProgressHUD', '~> 2.1.2'
+    s.dependency 'LBXScan/LBXNative','~> 2.2'
+    s.dependency 'LBXScan/UI','~> 2.2'
 end
