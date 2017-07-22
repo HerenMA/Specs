@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "HRFramework"
-    s.summary      = "a HerenMA framework for iOS."
+    s.summary      = "HerenMA framework for iOS."
     s.version      = "1.0.0"
     s.license      = { :type => "MIT", :file => "LICENSE" }
     s.authors      = { "MONO" => "yinjianjun1@herenit.com" }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
-    s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation", "CoreLocation"
+    s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation", "CoreLocation", "CoreImage"
     s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
 
     s.dependency 'AFNetworking', '~> 3.1.0'
