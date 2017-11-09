@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
     s.homepage     = "https://github.com/herenMA/HRFramework"
     s.source       = { :git => "https://github.com/herenMA/HRFramework.git", :tag => s.version }
     s.requires_arc = true
-    s.platform     = :ios, "7.0"
-    s.ios.deployment_target = "7.0"
+    s.platform     = :ios, "8.0"
+    s.ios.deployment_target = "8.0"
     s.frameworks = "Foundation", "UIKit", "AddressBook", "AVFoundation", "CoreLocation", "CoreImage"
     s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
 
