@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
     s.homepage     = "https://github.com/herenMA/MJPhotoBrowser"
     s.source       = { :git => "https://github.com/herenMA/MJPhotoBrowser.git", :tag => s.version }
     s.requires_arc = true
-    s.platform     = :ios, "7.0"
-    s.ios.deployment_target = "7.0"
+    s.platform     = :ios, "8.0"
+    s.ios.deployment_target = "8.0"
     s.frameworks = "Foundation", "UIKit", "QuartzCore"
     s.source_files = "MJPhotoBrowser/Classes/*.{h,m}"
 
