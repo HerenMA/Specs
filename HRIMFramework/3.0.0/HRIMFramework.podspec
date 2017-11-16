@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     s.dependency 'HPGrowingTextView', '~> 1.1'
     s.dependency 'JSBadgeView', '~> 1.4.1'
     s.dependency 'MGSwipeTableCell', '~> 1.5.6'
-    s.dependency 'MJRefresh', '~> 3.1.12'
+    s.dependency 'MJRefresh', '~> 3.1.15'
     s.dependency 'SVProgressHUD', '~> 2.1.2'
     s.dependency 'LBXScan/LBXNative','~> 2.2'
     s.dependency 'LBXScan/UI','~> 2.2'
