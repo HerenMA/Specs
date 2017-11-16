@@ -17,3 +17,4 @@ Pod::Spec.new do |s|
     s.dependency 'YYModel', '~> 1.0.4'
     s.dependency 'YYWebImage', '~> 1.0.5'
 end
+

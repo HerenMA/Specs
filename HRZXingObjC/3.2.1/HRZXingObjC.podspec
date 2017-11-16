@@ -13,3 +13,4 @@ Pod::Spec.new do |s|
     s.frameworks = "Foundation", "UIKit", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "ImageIO", "QuartzCore"
     s.vendored_frameworks = "ZXingObjC/Classes/ZXingObjC.framework"
 end
+
