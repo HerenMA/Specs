@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.license      = { :type => "MIT", :file => "LICENSE" }
     s.authors      = { "MONO" => "yinjianjun1@herenit.com" }
     s.homepage     = "https://github.com/herenMA/HRIMFramework"
-    s.source       = { :http => "https://raw.githubusercontent.com/HerenMA/HRIMFramework/master/HRIMFramework_3.0.0.zip", :sha1 => "dc20c5c3864b08c158e8fc16b968190bbe4ac084" }
+    s.source       = { :http => "https://raw.githubusercontent.com/HerenMA/HRIMFramework/master/HRIMFramework_3.0.0.zip", :sha1 => "b0426f5b218eab7097ea6a2509ab1a4f8f34f4ac" }
     s.requires_arc = true
     s.platform     = :ios, "8.0"
     s.ios.deployment_target = "8.0"
