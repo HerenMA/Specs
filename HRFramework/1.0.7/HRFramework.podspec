@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
     s.dependency 'YYCategories', '~> 1.0.4'
     s.dependency 'YYModel', '~> 1.0.4'
     s.dependency 'YYWebImage', '~> 1.0.6'
-    s.dependency 'JPImageresizerView', '~> 0.4.5'
+    s.dependency 'JPImageresizerView', '~> 0.4.9'
 end
