@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
     s.frameworks = "Foundation", "UIKit", "QuartzCore"
     s.source_files = "MJPhotoBrowser/Classes/*.{h,m}"
 
-    s.dependency 'YYWebImage', '~> 1.0.5'
+    s.dependency 'YYWebImage', '~> 1.0.6'
 end
