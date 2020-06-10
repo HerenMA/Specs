@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.dependency 'HPGrowingTextView', '~> 1.1'
     s.dependency 'JSBadgeView', '~> 1.4.1'
     s.dependency 'MGSwipeTableCell', '~> 1.5.6'
-    s.dependency 'MJRefresh', '~> 3.1.15'
+    s.dependency 'MJRefresh', '~> 3.1.17'
     s.dependency 'SVProgressHUD', '~> 2.1.2'
     s.dependency 'SGQRCode', '~> 3.0.1'
     s.dependency 'HHRouter', '~> 0.1.9'
