@@ -6,6 +6,8 @@ Pod::Spec.new do |s|
   s.authors = {"Mattt Thompson"=>"m@mattt.me"}
   s.homepage = "https://github.com/AFNetworking/AFNetworking"
   s.social_media_url = "https://twitter.com/AFNetworking"
+  s.frameworks = ["UIKit", "WebKit"]
+  s.requires_arc = true
   s.source = { :git => "https://github.com/HerenMA/AFNetworking.git", :tag => s.version }
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
