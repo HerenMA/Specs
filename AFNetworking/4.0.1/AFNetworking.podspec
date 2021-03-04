@@ -6,12 +6,16 @@ Pod::Spec.new do |s|
   s.authors = {"Mattt Thompson"=>"m@mattt.me"}
   s.homepage = "https://github.com/AFNetworking/AFNetworking"
   s.social_media_url = "https://twitter.com/AFNetworking"
-  s.frameworks = ["UIKit", "WebKit"]
   s.requires_arc = true
   s.source = { :git => "https://github.com/HerenMA/AFNetworking.git", :tag => s.version }
 
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.frameworks = ["UIKit", "SystemConfiguration", "Security", "MobileCoreServices", "CoreGraphics", "WebKit"]
+  s.osx.frameworks = ["SystemConfiguration", "Security", "CoreServices", "CoreGraphics"]
+  s.watchos.frameworks = ["WatchKit", "Security", "MobileCoreServices", "CoreGraphics"]
+  s.tvos.frameworks = ["UIKit", "SystemConfiguration", "Security", "MobileCoreServices", "CoreGraphics"]
+  
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
 
   s.ios.deployment_target    = '9.0'
   s.ios.vendored_framework   = 'ios/AFNetworking.framework'
@@ -21,4 +25,5 @@ Pod::Spec.new do |s|
   s.watchos.vendored_framework   = 'watchos/AFNetworking.framework'
   s.tvos.deployment_target    = '9.0'
   s.tvos.vendored_framework   = 'tvos/AFNetworking.framework'
+  
 end
