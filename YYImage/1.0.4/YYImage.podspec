@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
     webp.dependency 'YYImage/Core'
     webp.ios.vendored_frameworks = 'Vendor/WebP.framework'
     webp.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    webp.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
 
   s.subspec 'libwebp' do |libwebp|
