@@ -18,18 +18,28 @@ Pod::Spec.new do |s|
   s.watchos.frameworks = ["WatchKit", "Security", "MobileCoreServices", "CoreGraphics"]
   s.tvos.frameworks = ["UIKit", "SystemConfiguration", "Security", "MobileCoreServices", "CoreGraphics"]
   
-  s.ios.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
+  s.ios.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.osx.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
   s.watchos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking-watchOS' }
-  s.tvos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.tvos.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
+  s.tvos.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
 
-  s.source_files = 'AFNetworking/AFNetworking.h'
+  s.default_subspec = 'Core'
 
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'AFNetworking/AFNetworking.h'
+  end
+  
   s.subspec 'Serialization' do |ss|
+    ss.dependency 'AFNetworking/Core'
+    
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
   end
 
   s.subspec 'Security' do |ss|
+    ss.dependency 'AFNetworking/Core'
+    
     ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
   end
 
@@ -37,11 +47,13 @@ Pod::Spec.new do |s|
     ss.ios.deployment_target = '9.0'
     ss.osx.deployment_target = '10.10'
     ss.tvos.deployment_target = '9.0'
-
+    ss.dependency 'AFNetworking/Core'
+    
     ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
   end
 
   s.subspec 'NSURLSession' do |ss|
+    ss.dependency 'AFNetworking/Core'
     ss.dependency 'AFNetworking/Serialization'
     ss.ios.dependency 'AFNetworking/Reachability'
     ss.osx.dependency 'AFNetworking/Reachability'
@@ -54,8 +66,17 @@ Pod::Spec.new do |s|
   s.subspec 'UIKit' do |ss|
     ss.ios.deployment_target = '9.0'
     ss.tvos.deployment_target = '9.0'
+    ss.dependency 'AFNetworking/Core'
     ss.dependency 'AFNetworking/NSURLSession'
 
     ss.source_files = 'UIKit+AFNetworking'
   end
+  
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework = 'ios/AFNetworking.framework'
+    ss.osx.vendored_framework = 'osx/AFNetworking.framework'
+    ss.watchos.vendored_framework = 'watchos/AFNetworking.framework'
+    ss.tvos.vendored_framework = 'tvos/AFNetworking.framework'
+  end
+  
 end
