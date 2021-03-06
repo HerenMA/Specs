@@ -29,47 +29,40 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'AFNetworking/AFNetworking.h'
-  end
-  
-  s.subspec 'Serialization' do |ss|
-    ss.dependency 'AFNetworking/Core'
     
-    ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
-  end
+    ss.subspec 'Serialization' do |sss|
+      sss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
+    end
 
-  s.subspec 'Security' do |ss|
-    ss.dependency 'AFNetworking/Core'
+    ss.subspec 'Security' do |sss|
+      sss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
+    end
+
+    ss.subspec 'Reachability' do |sss|
+      sss.ios.deployment_target = '9.0'
+      sss.osx.deployment_target = '10.10'
+      sss.tvos.deployment_target = '9.0'
     
-    ss.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
-  end
+      sss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
+    end
 
-  s.subspec 'Reachability' do |ss|
-    ss.ios.deployment_target = '9.0'
-    ss.osx.deployment_target = '10.10'
-    ss.tvos.deployment_target = '9.0'
-    ss.dependency 'AFNetworking/Core'
-    
-    ss.source_files = 'AFNetworking/AFNetworkReachabilityManager.{h,m}'
-  end
+    ss.subspec 'NSURLSession' do |sss|
+      sss.dependency 'AFNetworking/Core/Serialization'
+      sss.ios.dependency 'AFNetworking/Core/Reachability'
+      sss.osx.dependency 'AFNetworking/Core/Reachability'
+      sss.tvos.dependency 'AFNetworking/Core/Reachability'
+      sss.dependency 'AFNetworking/Core/Security'
 
-  s.subspec 'NSURLSession' do |ss|
-    ss.dependency 'AFNetworking/Core'
-    ss.dependency 'AFNetworking/Serialization'
-    ss.ios.dependency 'AFNetworking/Reachability'
-    ss.osx.dependency 'AFNetworking/Reachability'
-    ss.tvos.dependency 'AFNetworking/Reachability'
-    ss.dependency 'AFNetworking/Security'
+      sss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
+    end
 
-    ss.source_files = 'AFNetworking/AF{URL,HTTP}SessionManager.{h,m}', 'AFNetworking/AFCompatibilityMacros.h'
-  end
+    ss.subspec 'UIKit' do |sss|
+      sss.ios.deployment_target = '9.0'
+      sss.tvos.deployment_target = '9.0'
+      sss.dependency 'AFNetworking/Core/NSURLSession'
 
-  s.subspec 'UIKit' do |ss|
-    ss.ios.deployment_target = '9.0'
-    ss.tvos.deployment_target = '9.0'
-    ss.dependency 'AFNetworking/Core'
-    ss.dependency 'AFNetworking/NSURLSession'
-
-    ss.source_files = 'UIKit+AFNetworking'
+      sss.source_files = 'UIKit+AFNetworking'
+    end
   end
   
   s.subspec 'Framework' do |ss|
