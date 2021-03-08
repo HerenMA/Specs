@@ -9,6 +9,9 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '5.0'
   
+  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.requires_arc = true
   s.default_subspec = 'Core'
   
@@ -17,8 +20,8 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'MGSwipeTableCell/**/*.{h}'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/MGSwipeTableCell.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/MGSwipeTableCell.framework'
+  end
     
 end
