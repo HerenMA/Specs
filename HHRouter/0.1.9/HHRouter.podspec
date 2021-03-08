@@ -24,4 +24,6 @@ Pod::Spec.new do |s|
     ss.ios.vendored_framework   = 'ios/HHRouter.framework'
   end
   
+  s.frameworks = 'UIKit'
+  
 end
