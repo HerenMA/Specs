@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'HHRouter/**/*.{h}'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/HHRouter.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/HHRouter.framework'
+  end
   
 end
