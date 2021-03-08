@@ -11,6 +11,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.ios.deployment_target = '8.0'
 
+  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.requires_arc = true
   s.default_subspec = 'Core'
   
@@ -18,9 +21,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'JSBadgeView/Classes/**/*'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework = 'ios/JSBadgeView.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework = 'ios/JSBadgeView.framework'
+  end
 
   s.frameworks = 'QuartzCore'
 end
