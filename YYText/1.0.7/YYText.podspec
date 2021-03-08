@@ -10,9 +10,20 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source       = { :git => 'https://github.com/HerenMA/YYText.git', :tag => s.version.to_s }
   
+  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.requires_arc = true
-  s.source_files = 'YYText/**/*.{h,m}'
-  s.public_header_files = 'YYText/**/*.{h}'
+  s.default_subspec = 'Core'
+  
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'YYText/**/*.{h,m}'
+    ss.public_header_files = 'YYText/**/*.{h}'
+  end
+  
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/YYText.framework'
+  end
   
   s.frameworks = 'UIKit', 'CoreFoundation','CoreText', 'QuartzCore', 'Accelerate', 'MobileCoreServices'
 
