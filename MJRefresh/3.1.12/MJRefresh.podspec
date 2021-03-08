@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.authors      = {'MJ Lee' => '199109106@qq.com'}
   s.platform     = :ios, '6.0'
   s.source       = {:git => 'https://github.com/HerenMA/MJRefresh.git', :tag => s.version}
-  s.resource     = 'MJRefresh/MJRefresh.bundle'
   
   s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
@@ -16,10 +15,12 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   
   s.subspec 'Core' do |ss|
+    ss.resource     = 'MJRefresh/MJRefresh.bundle'
     ss.source_files = 'MJRefresh/**/*.{h,m}'
   end
   
   s.subspec 'Framework' do |ss|
+    ss.resource   = 'MJRefresh/MJRefresh.bundle'
     ss.ios.vendored_framework   = 'ios/MJRefresh.framework'
   end
   
