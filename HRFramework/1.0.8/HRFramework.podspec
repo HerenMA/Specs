@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
     s.platform     = :ios, "9.0"
     s.ios.deployment_target = "9.0"
     s.frameworks = "Foundation", "UIKit", "AVFoundation", "CoreLocation", "CoreImage"
-    s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
+    s.vendored_frameworks = "ios/HRFramework.framework"
 
-    s.dependency 'AFNetworking', '~> 4.0.1'
-    s.dependency 'YYCategories', '~> 1.0.4'
-    s.dependency 'YYModel', '~> 1.0.4'
-    s.dependency 'YYWebImage', '~> 1.0.5'
-    s.dependency 'JPImageresizerView', '~> 1.7.8'
+    s.dependency 'AFNetworking/Framework'
+    s.dependency 'YYCategories/Framework'
+    s.dependency 'YYModel/Framework'
+    s.dependency 'YYWebImage'
+    s.dependency 'JPImageresizerView/Framework'
 end
