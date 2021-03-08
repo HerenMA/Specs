@@ -19,8 +19,13 @@ Pod::Spec.new do |s|
     
     s.subspec 'Core' do |ss|
       ss.source_files = "HRVoiceConvert/**/*.{h,m}"
-      ss.vendored_libraries = "HRVoiceConvert/**/*.a"
       ss.public_header_files = "HRVoiceConvert/HRVoiceConvert.h"
     end
     
+    s.subspec 'Framework' do |ss|
+      ss.ios.vendored_framework   = 'ios/HRVoiceConvert.framework'
+    end
+    
+    s.vendored_libraries = "HRVoiceConvert/**/*.a"
+  
 end
