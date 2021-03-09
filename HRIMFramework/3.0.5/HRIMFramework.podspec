@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.license      = { :type => "MIT", :file => "LICENSE" }
     s.authors      = { "MONO" => "yinjianjun1@herenit.com" }
     s.homepage     = "https://github.com/HerenMA/HRIMFramework"
-    s.source       = { :http => "https://raw.githubusercontent.com/HerenMA/HRIMFramework/master/HRIMFramework_3.0.5.zip", :sha1 => "7321e4db1a7ddabd633d9c67275955a4e9102db5" }
+    s.source       = { :http => "https://raw.githubusercontent.com/HerenMA/HRIMFramework/master/HRIMFramework_3.0.5.zip", :sha1 => "bb4d685fd8da09ef7f26f2ddd9b47892db3ea027" }
     s.requires_arc = true
     s.platform     = :ios, "9.0"
     s.ios.deployment_target = "9.0"
@@ -13,16 +13,17 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = "HRIMFramework.framework"
     s.resources    = "HRIMSDK.bundle"
 
-    s.dependency 'HRFramework', '~> 1.0.7'
-    s.dependency 'HRMJPhotoBrowser', '~> 1.0.3'
-    s.dependency 'HRTIMSDK', '~> 2.5.6'
+    s.dependency 'HRFramework'
+    s.dependency 'MJPhotoBrowser/Framework'
+    s.dependency 'TIMSDK'
 
-    s.dependency 'KVOController', '~> 1.2.0'
-    s.dependency 'HPGrowingTextView', '~> 1.1'
-    s.dependency 'JSBadgeView', '~> 1.4.1'
-    s.dependency 'MGSwipeTableCell', '~> 1.5.6'
-    s.dependency 'MJRefresh', '~> 3.1.17'
-    s.dependency 'SVProgressHUD', '~> 2.1.2'
-    s.dependency 'SGQRCode', '~> 3.0.1'
-    s.dependency 'HHRouter', '~> 0.1.9'
+    s.dependency 'KVOController/Framework'
+    s.dependency 'HPGrowingTextView/Framework'
+    s.dependency 'JSBadgeView/Framework'
+    s.dependency 'MGSwipeTableCell/Framework'
+    s.dependency 'MJRefresh/Framework'
+    s.dependency 'SVProgressHUD/Framework'
+    s.dependency 'HHRouter/Framework'
+    s.dependency 'SGQRCode/Framework'
+
 end
