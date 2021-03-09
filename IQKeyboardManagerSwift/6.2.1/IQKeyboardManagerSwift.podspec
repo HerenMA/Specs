@@ -20,11 +20,6 @@ Pod::Spec.new do |s|
     ss.resource   = 'IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle'
     ss.source_files = 'IQKeyboardManagerSwift/**/*.{swift}'
   end
-
-  #s.subspec 'Framework' do |ss|
-  #  ss.resource   = 'IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle'
-  #  ss.ios.vendored_framework   = 'ios/IQKeyboardManagerSwift.framework'
-  #end
   
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'QuartzCore'
 
