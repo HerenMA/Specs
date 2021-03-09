@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
     ss.source_files       = "SCLAlertView/*"
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/SCLAlertView.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/SCLAlertView.framework'
+  end
   
 end
