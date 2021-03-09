@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
     ss.source_files = 'SPPageMenu/*.{h,m}'
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/SPPageMenu.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/SPPageMenu.framework'
+  end
   
 end
