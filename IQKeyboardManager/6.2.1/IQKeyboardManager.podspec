@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'IQKeyboardManager/**/*.{h}'
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.resource   = 'IQKeyboardManager/Resources/IQKeyboardManager.bundle'
-  #  ss.ios.vendored_framework   = 'ios/IQKeyboardManager.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.resource   = 'IQKeyboardManager/Resources/IQKeyboardManager.bundle'
+    ss.ios.vendored_framework   = 'ios/IQKeyboardManager.framework'
+  end
   
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'QuartzCore'
 
