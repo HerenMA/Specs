@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
     ss.public_header_files = "dsbridge/*.h"
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/dsBridge.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/dsBridge.framework'
+  end
 
   s.frameworks = 'WebKit'
   
