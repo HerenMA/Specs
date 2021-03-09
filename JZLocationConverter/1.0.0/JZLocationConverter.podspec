@@ -21,9 +21,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'JZLocationConverter/*.{h,m}'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/JZLocationConverter.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/JZLocationConverter.framework'
+  end
   
   s.frameworks = 'CoreLocation'
 
