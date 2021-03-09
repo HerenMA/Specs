@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
     ss.resources = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{xml}"
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/MOFSPickerManager.framework'
-  #  ss.resources = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{xml}"
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/MOFSPickerManager.framework'
+    ss.resources = "MOFSPickerManagerDemo/MOFSPickerManager/**/*.{xml}"
+  end
   
 end
