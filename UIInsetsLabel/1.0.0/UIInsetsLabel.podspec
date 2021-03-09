@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
     ss.source_files  = "UIInsetsLabel/*.{h,m}"
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/UIInsetsLabel.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/UIInsetsLabel.framework'
+  end
     
 end
