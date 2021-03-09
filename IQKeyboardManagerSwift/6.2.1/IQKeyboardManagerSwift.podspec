@@ -18,8 +18,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.resource   = 'IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle'
-    ss.source_files = 'IQKeyboardManagerSwift/**/*.{h,m}'
-    ss.public_header_files = 'IQKeyboardManagerSwift/**/*.{h}'
+    ss.source_files = 'IQKeyboardManagerSwift/**/*.{swift}'
   end
 
   #s.subspec 'Framework' do |ss|
