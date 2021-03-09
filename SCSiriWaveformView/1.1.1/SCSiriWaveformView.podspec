@@ -21,9 +21,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'SCSiriWaveformView/*'
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/SCSiriWaveformView.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/SCSiriWaveformView.framework'
+  end
   
   s.frameworks = 'UIKit', 'QuartzCore', 'CoreGraphics', 'Foundation', 'AVFoundation'
 
