@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Files/*.{h,m}"
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/WAKeychain.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/WAKeychain.framework'
+  end
   
   s.dependency   "SSKeychain/Framework"
   
