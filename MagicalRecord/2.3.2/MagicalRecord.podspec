@@ -37,9 +37,10 @@ Pod::Spec.new do |s|
     sp.dependency 'CocoaLumberjack', '~> 2.0'
   end
 
-  #s.subspec 'Framework' do |ss|
-  #  ss.framework    = 'CoreData'
-  #  ss.ios.vendored_framework   = 'ios/MagicalRecord.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.framework    = 'CoreData'
+    ss.ios.vendored_framework   = 'ios/MagicalRecord.framework'
+    ss.osx.vendored_framework   = 'osx/MagicalRecord.framework'
+  end
   
 end
