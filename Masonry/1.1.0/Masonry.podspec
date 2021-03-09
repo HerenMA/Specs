@@ -43,10 +43,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'Masonry/*.{h,m}'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework    = 'ios/Masonry.framework'
-  #  ss.osx.vendored_framework    = 'osx/Masonry.framework'
-  #  ss.tvos.vendored_framework   = 'tvos/Masonry.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/Masonry.framework'
+    ss.osx.vendored_framework   = 'osx/Masonry.framework'
+    ss.tvos.vendored_framework   = 'tvos/Masonry.framework'
+  end
   
 end
