@@ -36,9 +36,9 @@ Pod::Spec.new do |s|
       ss.dependency 'MMDrawerController/Core'
   end
   
-  #s.subspec 'Framework' do |ss|
-  #  ss.ios.vendored_framework   = 'ios/MMDrawerController.framework'
-  #end
+  s.subspec 'Framework' do |ss|
+    ss.ios.vendored_framework   = 'ios/MMDrawerController.framework'
+  end
   
   s.framework  = 'QuartzCore'
   
