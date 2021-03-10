@@ -13,8 +13,9 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = "ios/HRFramework.framework"
 
     s.dependency 'AFNetworking/Framework'
+    s.dependency 'JPImageresizerView/Framework'
     s.dependency 'YYCategories/Framework'
     s.dependency 'YYModel/Framework'
     s.dependency 'YYWebImage'
-    s.dependency 'JPImageresizerView/Framework'
+
 end
