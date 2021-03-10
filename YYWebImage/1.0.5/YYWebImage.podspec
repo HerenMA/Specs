@@ -6,21 +6,17 @@ Pod::Spec.new do |s|
   s.authors      = { 'ibireme' => 'ibireme@gmail.com' }
   s.social_media_url = 'http://blog.ibireme.com'
   s.homepage     = 'https://github.com/ibireme/YYWebImage'
-  s.platform     = :ios, '9.0'
-  s.ios.deployment_target = '9.0'
+  s.platform     = :ios, '6.0'
+  s.ios.deployment_target = '6.0'
   s.source       = { :git => 'https://github.com/HerenMA/YYWebImage.git', :tag => s.version.to_s }
-  
-  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   s.requires_arc = true
   s.source_files = 'YYWebImage/*.{h,m}', 'YYWebImage/Categories/*.{h,m}'
   s.public_header_files = 'YYWebImage/*.{h}', 'YYWebImage/Categories/*.{h}'
   s.private_header_files = 'YYWebImage/Categories/_*.{h}'
-  
   s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'AssetsLibrary', 'ImageIO', 'Accelerate', 'MobileCoreServices'
   
-  s.dependency 'YYCache'
   s.dependency 'YYImage'
+  s.dependency 'YYCache'
   
 end
