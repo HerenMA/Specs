@@ -36,15 +36,5 @@ Pod::Spec.new do |s|
     sp.dependency 'MagicalRecord/Core'
     sp.dependency 'CocoaLumberjack', '~> 2.0'
   end
-
-  s.subspec 'Framework' do |sp|
-    sp.framework    = 'CoreData'
-    sp.ios.vendored_framework   = 'ios/MagicalRecord.framework'
-    sp.osx.vendored_framework   = 'osx/MagicalRecord.framework'
-    sp.prefix_header_contents = <<-EOS
-    #import <CoreData/CoreData.h>
-    #import <MagicalRecord/MagicalRecord.h>
-    EOS
-  end
   
 end
