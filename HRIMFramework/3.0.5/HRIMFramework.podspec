@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = "HRIMFramework.framework"
     s.resources    = "HRIMSDK.bundle"
 
+    s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
     s.dependency 'HRFramework'
     s.dependency 'TIMSDK'
     s.dependency 'MJPhotoBrowser/Framework'
