@@ -12,13 +12,11 @@ Pod::Spec.new do |s|
     s.frameworks = "Foundation", "UIKit", "AVFoundation", "CoreLocation", "CoreImage"
     s.vendored_frameworks = "ios/HRFramework.framework"
 
-    s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
     s.dependency 'AFNetworking/Framework'
     s.dependency 'JPImageresizerView/Framework'
-    s.dependency 'YYCategories/Framework'
-    s.dependency 'YYModel/Framework'
+    s.dependency 'YYCategories'
+    s.dependency 'YYModel'
     s.dependency 'YYWebImage'
 
 end
