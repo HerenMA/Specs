@@ -9,9 +9,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/HerenMA/HPGrowingTextView.git", :tag => s.version.to_s }
   s.platform     = :ios, '9.0'
   s.ios.deployment_target = '9.0'
-
-  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   s.requires_arc = true
   s.default_subspec = 'Core'
