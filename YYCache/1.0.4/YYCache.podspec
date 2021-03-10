@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
   s.libraries = 'sqlite3'
   s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
   
+  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.source_files = 'YYCache/*.{h,m}'
   s.public_header_files = 'YYCache/*.{h}'
   
