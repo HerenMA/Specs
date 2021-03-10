@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'http://blog.ibireme.com'
   s.homepage     = 'https://github.com/ibireme/YYModel'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.7'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
