@@ -11,9 +11,6 @@ Pod::Spec.new do |s|
   s.screenshots = [ "http://mutualmobile.github.io/MMDrawerController/ExampleImages/example1.png",
                        "http://mutualmobile.github.io/MMDrawerController/ExampleImages/example2.png" ]
   
-  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  
   s.requires_arc = true
   s.default_subspec = 'Core'
     
