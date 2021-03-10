@@ -11,9 +11,6 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
   s.screenshots = ["https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoSVloLXRKSC1DbEk"]
   
-  s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  
   s.requires_arc = true
   s.default_subspec = 'Core'
 
