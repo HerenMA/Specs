@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.8.9"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "weixin" => "weixin-open@qq.com" }
-  s.homepage     = "https://mp.weixin.qq.com"
+  s.homepage     = "https://github.com/HerenMA/WeChatOpenSDK_NoPay"
   s.source       = { :http => "https://res.wx.qq.com/op_res/6_LTcOKImd1OkrGr3ZvVyc6JnrqW2BQc0zEHVqI6haRbGOhbvyBxHArFkhL7YhEF6IwtWQysWihXejr9YuMA1w", :type => "zip" }
   s.requires_arc = false
   s.platform     = :ios, "8.0"
