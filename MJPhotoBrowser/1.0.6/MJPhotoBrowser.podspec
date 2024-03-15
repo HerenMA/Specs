@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     end
     
     s.frameworks = "Foundation", "UIKit", "QuartzCore", "AVFoundation", "AVKit", "Photos"
-    s.pod_target_xcconfig = {'VALID_ARCHS' => 'x86_64 armv7 arm64'}
+    s.pod_target_xcconfig = {'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
         
     s.dependency 'YYWebImage'
     s.dependency 'SVProgressHUD/Framework'
